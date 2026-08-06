@@ -22,7 +22,7 @@
             margin: 0 auto;
             background: #fff;
             padding: 40px 50px;
-            border-radius: 12px;
+            border-radius: 12;
             box-shadow: 0 2px 15px rgba(0, 80, 180, 0.1);
         }
         /* 头部信息 */
@@ -67,7 +67,7 @@
         /* 条目通用 */
         .item {
             margin-bottom: 24px;
-            border: 1px solid #e2e8f;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 16px 20px;
             background: #fafcff;
@@ -197,15 +197,15 @@
             </ul>
         </div>
 
-        <!-- 三、竞赛证书（新增PDF查看按钮） -->
+        <!-- 三、竞赛证书 -->
         <div class="section">
             <h2 class="section-title">竞赛证书</h2>
             <div class="cert-box">
                 <h4>2024第十四届MathorCup高校数学建模挑战赛</h4>
                 <p>参赛身份：编程手（团队组员） | 奖项：本科生组 分赛区三等奖</p>
                 <p>证书编号：MC2405626 | 参赛题目：基于ARIMA时间序列预测模型对货物预测与人员排班问题的探究</p>
-                <!-- PDF查看按钮 本地路径方案 -->
-                <a href="2405626_2.pdf" target="_blank" class="pdf-btn">📄 点击查看获奖证书PDF</a>
+                <!-- 证书PDF链接 -->
+                <a href="3.pdf" target="_blank" class="pdf-btn">📄 点击查看MathorCup获奖证书</a>
                 <div style="margin-top:8px;">
                     <span class="item-tag">Python</span>
                     <span class="item-tag">ARIMA时序</span>
@@ -216,7 +216,7 @@
             </div>
         </div>
 
-        <!-- 四、项目经历（每个建模项目附带论文PDF按钮） -->
+        <!-- 四、项目经历 -->
         <div class="section">
             <h2 class="section-title">项目经历</h2>
 
@@ -239,7 +239,7 @@
                 </ul>
             </div>
 
-            <!-- 项目2：物流货量ARIMA建模（带论文PDF） -->
+            <!-- 项目2：物流分拣ARIMA建模 -->
             <div class="item">
                 <div class="item-head">
                     <span>MathorCup国赛：物流分拣货量预测与人员排班优化 | 编程手</span>
@@ -252,8 +252,7 @@
                     <span class="item-tag">热力图/ACF/PACF可视化</span>
                     <span class="item-tag"> pulp线性求解</span>
                 </div>
-                <!-- 论文PDF按钮 -->
-                <a href="CMC2405626.pdf" target="_blank" class="pdf-btn">📄 点击查看完整建模论文PDF</a>
+                <a href="mathercup.pdf" target="_blank" class="pdf-btn">📄 点击查看物流建模完整论文</a>
                 <ul>
                     <li>数据处理：清洗4个月物流历史货量数据，线性插值填充缺失值，ADF检验判断序列平稳，确定最优ARIMA(1,1,1)预测模型</li>
                     <li>建模预测：分日/小时级预测57个分拣中心未来30天货量；修正运输线路变更后的货量分配，绘制占比饼图、货量热力图、变化率柱状图</li>
@@ -262,7 +261,7 @@
                 </ul>
             </div>
 
-            <!-- 项目3：农作物最优种植（带论文PDF） -->
+            <!-- 项目3：农作物种植优化建模 -->
             <div class="item">
                 <div class="item-head">
                     <span>乡村农作物最优化种植策略模型 | 组长&编程手</span>
@@ -275,8 +274,7 @@
                     <span class="item-tag">Spearman相关性分析</span>
                     <span class="item-tag">MATLAB优化求解</span>
                 </div>
-                <!-- 论文PDF按钮 -->
-                <a href="国赛 .pdf" target="_blank" class="pdf-btn">📄 点击查看完整建模论文PDF</a>
+                <a href="guosai.pdf" target="_blank" class="pdf-btn">📄 点击查看农作物优化建模论文</a>
                 <ul>
                     <li>业务建模：整合山区多类型地块、大棚、轮作约束，以7年总利润最大建立线性规划基础模型</li>
                     <li>风险优化：采用SAA样本近似+蒙特卡洛模拟，处理产量、售价、种植成本波动不确定性</li>
@@ -309,7 +307,7 @@
             </div>
         </div>
 
-        <!-- 六、个人优势 + 全部个人荣誉（双栏） -->
+        <!-- 六、个人优势 + 全部个人荣誉 -->
         <div class="two-col">
             <div class="section">
                 <h2 class="section-title">个人优势</h2>
@@ -334,5 +332,4 @@
         </div>
     </div>
 </body>
-</html>
 </html>
