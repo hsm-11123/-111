@@ -1,47 +1,337 @@
 <!DOCTYPE html>
-<html lang="zh‑CN">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF‑8">
-    <meta name="viewport" content="width=device‑width, initial‑scale=1.0">
-    <title>个人简历｜网络工程</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>何势明 - IT运维/网络安全实习简历</title>
     <style>
-*{box‑sizing:border‑box;margin:0;padding:0;}
-body{max‑width:800px;margin:30px auto;padding:0 20px;font‑family:"Microsoft Yahei",sans-serif;line‑height:1.7;color:#222;background:#f7f9fa;}
-.box{background:#fff;padding:30px;border‑radius:10px;box‑shadow:0 1px 4px #ccc;}
-h1{text‑align:center;margin‑bottom:10px;color:#1f2937;}
-.info{text‑align:center;color:#555;margin‑bottom:25px;}
-h2{border‑left:4px solid #2563eb;padding‑left:10px;margin:24px 0 12px 0;font‑size:18px;}
-ul{padding‑left:22px;margin‑bottom:10px;}
-</style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background-color: #f4f7fc;
+            color: #2d3748;
+            line-height: 1.65;
+            padding: 30px 15px;
+        }
+        .resume-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0, 80, 180, 0.1);
+        }
+        /* 头部信息 */
+        .header {
+            border-bottom: 2px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 32px;
+            color: #1a365d;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 18px;
+            color:#2563eb;
+        }
+        .base-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 12px;
+            font-size: 15px;
+        }
+        .base-info span {
+            color: #4a5568;
+        }
+        .base-info strong {
+            color: #2563eb;
+        }
+        /* 通用板块样式 */
+        .section {
+            margin-bottom: 32px;
+        }
+        .section-title {
+            font-size: 20px;
+            border-left: 5px solid #2563eb;
+            padding-left: 12px;
+            margin-bottom: 16px;
+            color: #1a365d;
+        }
+        /* 条目通用 */
+        .item {
+            margin-bottom: 24px;
+            border: 1px solid #e2e8f;
+            border-radius: 8px;
+            padding: 16px 20px;
+            background: #fafcff;
+        }
+        .item-head {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 8px;
+            color: #1a365d;
+        }
+        .item-time {
+            color: #64748b;
+            font-weight: normal;
+        }
+        .item-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 13px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            margin-bottom: 6px;
+        }
+        /* PDF下载/查看按钮 */
+        .pdf-btn {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 5px 12px;
+            border-radius: 6px;
+            margin: 8px 10px 8px 0;
+            transition: background 0.2s;
+        }
+        .pdf-btn:hover {
+            background: #1d4ed8;
+        }
+        ul {
+            padding-left: 22px;
+            margin-top: 10px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        /* 技能分栏 */
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 10px;
+        }
+        .skill-card {
+            background: #f0f7ff;
+            padding: 12px 16px;
+            border-radius: 8px;
+        }
+        .skill-card h4 {
+            color: #2563eb;
+            margin-bottom: 6px;
+        }
+        /* 双栏布局 */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        /* 证书模块 */
+        .cert-box {
+            background: #eff6ff;
+            padding: 14px;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        /* 响应式适配手机 */
+        @media screen and (max-width:768px) {
+            .resume-wrap {
+                padding: 25px 20px;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .item-head {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="box">
-    <h1>XXX</h1>
-    <div class="info">邮箱：xxx@qq.com ｜电话：138‑xxxx‑xxxx｜求职方向：网络工程师 / 信息监理</div>
+    <div class="resume-wrap">
+        <!-- 头部基础信息 -->
+        <div class="header">
+            <h1>何势明</h1>
+            <p>求职意向：运维 / 网络安全 / IT 实习 | 意向城市：四川</p>
+            <div class="base-info">
+                <span><strong>电话：</strong>18190647008</span>
+                <span><strong>邮箱：</strong>2015720331@qq.com</span>
+                <span><strong>学历：</strong>全日制本科（网络工程）</span>
+                <span><strong>预计毕业：</strong>2027.06</span>
+            </div>
+        </div>
 
-    <h2>教育背景</h2>
-    <ul>
-        <li>XX学校 网络工程专业 本科 2023‑2027</li>
-    </ul>
+        <!-- 一、教育经历 -->
+        <div class="section">
+            <h2 class="section-title">教育经历</h2>
+            <div class="item">
+                <div class="item-head">
+                    <span>四川传媒学院 | 网络工程 全日制本科</span>
+                    <span class="item-time">2023.09 - 2027.06</span>
+                </div>
+                <p><strong>核心主修课程：</strong>计算机网络原理、TCP/IP协议、路由交换、Linux运维、Shell编程、服务器搭建、网络安全、防火墙、MySQL数据库、Python/Java、数据结构、操作系统、云计算、局域网组网</p>
+            </div>
+        </div>
 
-    <h2>实习经历</h2>
-    <ul>
-        <li>信息监理实习，参与涉密信息化项目监理工作；熟悉网络安全规范、项目文档编写。</li>
-    </ul>
+        <!-- 二、专业核心能力 -->
+        <div class="section">
+            <h2 class="section-title">专业核心能力</h2>
+            <ul>
+                <li><strong>网络运维：</strong>华为/思科交换机路由器配置，VLAN、静态/动态路由；精通IP规划、子网划分，可独立排查IP冲突、环路、断网等故障，熟练ping/tracert/Wireshark抓包分析</li>
+                <li><strong>系统运维：</strong>Windows Server、Linux日常运维、权限管理、Shell脚本、VMware虚拟化、服务器巡检与维护</li>
+                <li><strong>开发&数据：</strong>Python数据分析可视化、Java安卓开发、HTML简易Web；MySQL建库、SQL查询优化；线性规划、ARIMA时序建模、数学建模求解</li>
+                <li><strong>网络安全：</strong>防火墙策略配置、基础边界防护、网络拓扑绘制、Postman接口测试、Git版本管理</li>
+            </ul>
+        </div>
 
-    <h2>专业技能</h2>
-    <ul>
-        <li>网络基础：OSI/TCPIP模型，VLAN、Trunk、STP生成树、静态路由、ACL、NAT原理与eNSP模拟器实验</li>
-        <li>协议：TCP/UDP、FTP、TFTP、DHCP、DNS</li>
-        <li>证书备考：HCIA、软考网络工程师</li>
-        <li>工具：eNSP模拟器、Visio绘制拓扑、Wireshark抓包；GitHub维护网络学习笔记</li>
-    </ul>
+        <!-- 三、竞赛证书（新增PDF查看按钮） -->
+        <div class="section">
+            <h2 class="section-title">竞赛证书</h2>
+            <div class="cert-box">
+                <h4>2024第十四届MathorCup高校数学建模挑战赛</h4>
+                <p>参赛身份：编程手（团队组员） | 奖项：本科生组 分赛区三等奖</p>
+                <p>证书编号：MC2405626 | 参赛题目：基于ARIMA时间序列预测模型对货物预测与人员排班问题的探究</p>
+                <!-- PDF查看按钮 本地路径方案 -->
+                <a href="2405626_2.pdf" target="_blank" class="pdf-btn">📄 点击查看获奖证书PDF</a>
+                <div style="margin-top:8px;">
+                    <span class="item-tag">Python</span>
+                    <span class="item-tag">ARIMA时序</span>
+                    <span class="item-tag">整数规划</span>
+                    <span class="item-tag">数据可视化</span>
+                    <span class="item-tag">物流调度优化</span>
+                </div>
+            </div>
+        </div>
 
-    <h2>项目/学习成果</h2>
-    <ul>
-        <li>GitHub仓库：记录网络全套笔记、eNSP实验配置与拓扑截图</li>
-        <li>完成VLAN、三层交换、OSPF、ACL、NAT、STP防环路等多项模拟实验</li>
-    </ul>
-</div>
+        <!-- 四、项目经历（每个建模项目附带论文PDF按钮） -->
+        <div class="section">
+            <h2 class="section-title">项目经历</h2>
+
+            <!-- 项目1：校园局域网运维 -->
+            <div class="item">
+                <div class="item-head">
+                    <span>校园局域网与服务器维护运维 | 组员</span>
+                    <span class="item-time">2025.02 - 2025.12</span>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="item-tag">华为/思科设备</span>
+                    <span class="item-tag">VLAN划分</span>
+                    <span class="item-tag">故障排查</span>
+                    <span class="item-tag">机房运维</span>
+                </div>
+                <ul>
+                    <li>负责实训机房整体网络规划，完成网段划分、子网分配、交换机路由器上架接线调试</li>
+                    <li>配置端口隔离、静态网关，日常巡检并解决IP冲突、网线故障、端口宕机、终端无法上网问题</li>
+                    <li>使用ping、ipconfig、tracert完成连通性测试，标准化整理故障处理文档，优化机房网络稳定性</li>
+                </ul>
+            </div>
+
+            <!-- 项目2：物流货量ARIMA建模（带论文PDF） -->
+            <div class="item">
+                <div class="item-head">
+                    <span>MathorCup国赛：物流分拣货量预测与人员排班优化 | 编程手</span>
+                    <span class="item-time">2024.10</span>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="item-tag">Python</span>
+                    <span class="item-tag">ARIMA时序</span>
+                    <span class="item-tag">纯整数规划</span>
+                    <span class="item-tag">热力图/ACF/PACF可视化</span>
+                    <span class="item-tag"> pulp线性求解</span>
+                </div>
+                <!-- 论文PDF按钮 -->
+                <a href="CMC2405626.pdf" target="_blank" class="pdf-btn">📄 点击查看完整建模论文PDF</a>
+                <ul>
+                    <li>数据处理：清洗4个月物流历史货量数据，线性插值填充缺失值，ADF检验判断序列平稳，确定最优ARIMA(1,1,1)预测模型</li>
+                    <li>建模预测：分日/小时级预测57个分拣中心未来30天货量；修正运输线路变更后的货量分配，绘制占比饼图、货量热力图、变化率柱状图</li>
+                    <li>人员调度：构建0-1整数规划模型，约束正式工出勤率、连续出勤上限，最小化总人天数，输出6班次排班完整计划表</li>
+                    <li>产出：完整建模论文、全套Python可视化代码、预测结果数据表；项目获MathorCup省级三等奖</li>
+                </ul>
+            </div>
+
+            <!-- 项目3：农作物最优种植（带论文PDF） -->
+            <div class="item">
+                <div class="item-head">
+                    <span>乡村农作物最优化种植策略模型 | 组长&编程手</span>
+                    <span class="item-time">2025.11</span>
+                </div>
+                <div style="margin-bottom:8px;">
+                    <span class="item-tag">线性规划</span>
+                    <span class="item-tag">SAA随机模拟</span>
+                    <span class="item-tag">K-means聚类</span>
+                    <span class="item-tag">Spearman相关性分析</span>
+                    <span class="item-tag">MATLAB优化求解</span>
+                </div>
+                <!-- 论文PDF按钮 -->
+                <a href="国赛 .pdf" target="_blank" class="pdf-btn">📄 点击查看完整建模论文PDF</a>
+                <ul>
+                    <li>业务建模：整合山区多类型地块、大棚、轮作约束，以7年总利润最大建立线性规划基础模型</li>
+                    <li>风险优化：采用SAA样本近似+蒙特卡洛模拟，处理产量、售价、种植成本波动不确定性</li>
+                    <li>数据分析：作物相关性热力图、聚类肘部分析，区分互补/替代作物，优化土地分配方案</li>
+                    <li>落地输出：多情景种植方案、收益趋势图表、完整求解代码，为乡村农业收益提供量化决策依据</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 五、综合技能栈 -->
+        <div class="section">
+            <h2 class="section-title">综合技能栈</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h4>网络运维</h4>
+                    <p>TCP/IP、路由交换、VLAN、子网规划、Wireshark抓包、防火墙、机房排障、拓扑绘制</p>
+                </div>
+                <div class="skill-card">
+                    <h4>系统运维</h4>
+                    <p>Linux/Windows Server、Shell脚本、VMware虚拟化、服务器巡检、权限管控</p>
+                </div>
+                <div class="skill-card">
+                    <h4>编程&建模</h4>
+                    <p>Python、Java、ARIMA、线性/整数规划、数据可视化、Pulp、MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <h4>数据库&工具</h4>
+                    <p>MySQL、SQL优化、Postman、Git、Excel数据清洗、SPSS时序检验</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 六、个人优势 + 全部个人荣誉（双栏） -->
+        <div class="two-col">
+            <div class="section">
+                <h2 class="section-title">个人优势</h2>
+                <ul>
+                    <li>实操扎实：独立完成局域网搭建、设备调试、机房运维，网络故障定位修复速度快</li>
+                    <li>复合能力：兼具IT运维实操+数学建模编程能力，可完成数据分析、自动化脚本、业务优化建模</li>
+                    <li>团队协作：建模项目担任核心编程、运维项目配合团队施工交付，沟通执行力强</li>
+                    <li>快速学习：主动跟进云计算、网络安全、时序建模新技术，适配实习岗位需求</li>
+                    <li>规范作业：留存运维日志、建模文档、代码注释，输出标准化交付材料</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2 class="section-title">个人荣誉</h2>
+                <ul>
+                    <li>2024 MathorCup全国数学建模竞赛 省级三等奖</li>
+                    <li>校园计算机网络搭建技能竞赛 优秀奖</li>
+                    <li>校级学习优秀二等奖学金</li>
+                    <li>优秀学生干部</li>
+                    <li>校园足球联赛季军</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
